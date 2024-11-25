@@ -2,8 +2,8 @@ import { MissionUtils } from '@woowacourse/mission-utils';
 import OUTPUT_MESSAGES from '../constants/outputMessages.js';
 
 const OutputView = {
-  async printPurchaseNumber() {
-    return MissionUtils.Console.print(OUTPUT_MESSAGES.PURCHASE_NUMBER);
+  async printPurchaseNumber(purchasQuantity) {
+    return MissionUtils.Console.print(`${purchasQuantity}${OUTPUT_MESSAGES.PURCHASE_NUMBER}`);
   },
 
   async printWinningStatistics() {
@@ -12,6 +12,10 @@ const OutputView = {
 
   async printTotalReturn() {
     return MissionUtils.Console.print(OUTPUT_MESSAGES.TOTAL_RETURN);
+  },
+
+  async printLottoNumber(value) {
+    return MissionUtils.Console.print(value);
   },
 
   async printError(error) {
