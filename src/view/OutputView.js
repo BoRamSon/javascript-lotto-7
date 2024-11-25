@@ -6,12 +6,28 @@ const OutputView = {
     return MissionUtils.Console.print(`${purchasQuantity}${OUTPUT_MESSAGES.PURCHASE_NUMBER}`);
   },
 
-  async printWinningStatistics() {
-    return MissionUtils.Console.print(OUTPUT_MESSAGES.WINNING_STATISTICS);
+  async printWinningStatistics(three, four, five, fiveAndBonus, six) {
+    MissionUtils.Console.print(
+      `${OUTPUT_MESSAGES.MATCHED_THREE}${three}${OUTPUT_MESSAGES.PRINT_QUANTITY}`
+    );
+    MissionUtils.Console.print(
+      `${OUTPUT_MESSAGES.MATCHED_FOUR}${four}${OUTPUT_MESSAGES.PRINT_QUANTITY}`
+    );
+    MissionUtils.Console.print(
+      `${OUTPUT_MESSAGES.MATCHED_FIVE}${five}${OUTPUT_MESSAGES.PRINT_QUANTITY}`
+    );
+    MissionUtils.Console.print(
+      `${OUTPUT_MESSAGES.MATCHED_FIVE_BONUS}${fiveAndBonus}${OUTPUT_MESSAGES.PRINT_QUANTITY}`
+    );
+    MissionUtils.Console.print(
+      `${OUTPUT_MESSAGES.MATCHED_SIX}${six}${OUTPUT_MESSAGES.PRINT_QUANTITY}`
+    );
   },
 
-  async printTotalReturn() {
-    return MissionUtils.Console.print(OUTPUT_MESSAGES.TOTAL_RETURN);
+  async printTotalReturn(percentage) {
+    return MissionUtils.Console.print(
+      `${OUTPUT_MESSAGES.TOTAL_RETURN}${percentage}${OUTPUT_MESSAGES.TOTAL_RETURN_PERCENTAGE}`
+    );
   },
 
   async printLottoNumber(value) {
