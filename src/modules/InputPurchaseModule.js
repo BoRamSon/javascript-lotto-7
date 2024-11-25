@@ -9,7 +9,7 @@ class InputPurchaseModule {
   }
 
   async inputPurchaseAmount() {
-    return this.repeatInput();
+    return await this.repeatInput();
   }
 
   async inputAndValidation() {
