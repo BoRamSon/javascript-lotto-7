@@ -3,15 +3,15 @@ import INPUT_MESSAGES from '../constants/inputMessages.js';
 
 const InputView = {
   async readPurchaseAmount() {
-    return await MissionUtils.Console.readLineAsync(INPUT_MESSAGES.WHAT_PURCHASE_AMOUNT);
+    return await MissionUtils.Console.readLineAsync(INPUT_MESSAGES.whatPurchaseAmount);
   },
 
   async readWinningNumber() {
-    return await MissionUtils.Console.readLineAsync(INPUT_MESSAGES.WINNING_NUMBER);
+    return await MissionUtils.Console.readLineAsync(INPUT_MESSAGES.winningNumber);
   },
 
   async readBonusNumber() {
-    return await MissionUtils.Console.readLineAsync(INPUT_MESSAGES.BONUS_NUMBER);
+    return await MissionUtils.Console.readLineAsync(INPUT_MESSAGES.bonusNumber);
   },
 };
 
