@@ -32,7 +32,10 @@ class PrintWinningDetails {
       { matchThree: commonNumbers.filter((o) => o.matchNum === 3).length },
       { matchFour: commonNumbers.filter((o) => o.matchNum === 4).length },
       { matchFive: commonNumbers.filter((o) => o.matchNum === 5 && o.matchBonus === 0).length },
-      { matchFiveAndBonus: commonNumbers.filter((o) => o.matchNum === 5 && o.matchBonus === 1).length },
+      {
+        matchFiveAndBonus: commonNumbers.filter((o) => o.matchNum === 5 && o.matchBonus === 1)
+          .length,
+      },
       { matchSix: commonNumbers.filter((o) => o.matchNum === 6).length },
     ];
     return winningStatistics;
@@ -60,37 +63,11 @@ class PrintWinningDetails {
   }
 
   printProfitRate(purchasePrice, getWinningAmount) {
-    const profitRateCalcul = (((getWinningAmount - purchasePrice) / purchasePrice) * 100).toFixed(2);
+    const profitRateCalcul = (((getWinningAmount - purchasePrice) / purchasePrice) * 100).toFixed(
+      2
+    );
     OutputView.printTotalReturn(profitRateCalcul);
   }
 }
 
 export default PrintWinningDetails;
-
-//=====================================
-// test
-
-// const lottoNumber = [
-//   [2, 10, 20, 29, 43, 44],
-//   [(7, 15, 16, 20, 28, 40)],
-//   [(25, 31, 34, 35, 40, 44)],
-//   [(1, 2, 10, 24, 25, 26)],
-//   [(2, 4, 11, 27, 32, 37)],
-// ];
-
-// const winningNumber = [20, 29, 40, 25, 2, 4];
-
-// const bonusNumber = 2;
-
-// const test = new PrintWinningDetails();
-// test.winningDetails(lottoNumber, winningNumber, bonusNumber);
-
-// const commonNumbers = [
-//   { matchNum: 3, matchBonus: 1 },
-//   { matchNum: 1, matchBonus: 0 },
-//   { matchNum: 0, matchBonus: 0 },
-//   { matchNum: 0, matchBonus: 0 },
-//   { matchNum: 0, matchBonus: 0 },
-// ];
-
-// const
