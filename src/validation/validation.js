@@ -55,6 +55,13 @@ class validation {
     return true;
   }
 
+  isDuplicatedInLottoNumbers(number) {
+    const removeDuplicated = new Set(number);
+    const uniqueArray = [...removeDuplicated];
+    if (number.length !== uniqueArray.length)
+      createThrowError(ERROR_MESSAGES.isDuplicatedInLottoNumbers);
+  }
+
   isDuplicatedInWinningNumber(bonusNumber, winningNumber) {
     const isDuplicated = winningNumber.some(
       (winningNumber) => Number(winningNumber) === Number(bonusNumber)
