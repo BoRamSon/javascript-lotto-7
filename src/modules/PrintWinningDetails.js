@@ -7,7 +7,6 @@ class PrintWinningDetails {
 
   winningDetails(lottoNumber, winningNumber, bonusNumber) {
     const commonNumbers = this.checkMatchedNumber(lottoNumber, winningNumber, bonusNumber);
-    // console.log(commonNumbers);
     const winningStatistics = this.getWinningStatistics(commonNumbers);
     this.printWinningStatistics(winningStatistics);
     const winningAmount = this.getWinningAmount(winningStatistics);
