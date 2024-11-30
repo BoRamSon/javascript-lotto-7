@@ -11,7 +11,7 @@ const OutputView = {
   },
 
   async printWinningStatistics(three, four, five, fiveAndBonus, six) {
-    MissionUtils.Console.print(`${OUTPUT_MESSAGES.MATCHED_THREE}${three}${OUTPUT_MESSAGES.printQuantity}`);
+    MissionUtils.Console.print(`${OUTPUT_MESSAGES.matchedThree}${three}${OUTPUT_MESSAGES.printQuantity}`);
     MissionUtils.Console.print(`${OUTPUT_MESSAGES.matchedFour}${four}${OUTPUT_MESSAGES.printQuantity}`);
     MissionUtils.Console.print(`${OUTPUT_MESSAGES.matchedFive}${five}${OUTPUT_MESSAGES.printQuantity}`);
     MissionUtils.Console.print(`${OUTPUT_MESSAGES.matchedFiveBonus}${fiveAndBonus}${OUTPUT_MESSAGES.printQuantity}`);
