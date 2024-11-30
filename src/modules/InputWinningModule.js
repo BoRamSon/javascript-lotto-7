@@ -1,4 +1,4 @@
-import ERROR_MESSAGES from '../constants/errorMessages.js';
+import { ERROR_MESSAGES } from '../constants/errorMessages.js';
 import validation from '../validation/validation.js';
 import InputView from '../view/InputView.js';
 import OutputView from '../view/OutputView.js';
@@ -43,7 +43,7 @@ class InputWinningModule {
     for (let i = 0; i < 10; i++) {
       const vlaidatedInput = await this.errorCatch();
       if (vlaidatedInput) return vlaidatedInput;
-      if (i === 5) throw new Error(ERROR_MESSAGES.ENTERED_MORE_FIVE_TIMES);
+      if (i === 5) throw new Error(ERROR_MESSAGES.enteredMoreFiveTimes);
     }
   }
 }
