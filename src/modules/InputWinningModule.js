@@ -27,6 +27,7 @@ class InputWinningModule {
     const regExpPattern = /^\d(,\s?\d)*/;
     this.validation.regularExpression(value, regExpPattern);
     this.validation.winningNumberSixDigit(value);
+    this.validation.isDuplicatedInLottoNumbers(value);
   }
 
   async errorCatch() {
