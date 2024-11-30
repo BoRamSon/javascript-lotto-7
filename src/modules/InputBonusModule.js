@@ -1,30 +1,35 @@
-import ERROR_MESSAGES from '../constants/errorMessages.js';
+import { ERROR_MESSAGES } from '../constants/errorMessages.js';
 import validation from '../validation/validation.js';
 import InputView from '../view/InputView.js';
 import OutputView from '../view/OutputView.js';
 
 class InputBonusModule {
-  constructor() {
+  constructor(winningNumber) {
     this.validation = new validation();
+    this.winningNumber = winningNumber;
   }
 
   async inputBonusNumber() {
     const validatedBonusNumber = await this.repeatInput();
-    const changgeTypeNumber = Number(validatedPurchaseAmount);
+    const changeTypeNumber = Number(validatedBonusNumber);
     OutputView.printSpace();
-    return changgeTypeNumber;
+    return changeTypeNumber;
   }
 
   async inputAndValidation() {
     const input = await InputView.readBonusNumber();
-    this.validateBonusNumber(input);
+    console.log(`?????? 잘 가져오니 ?? - ${input}`);
+    const winningNumber = this.winningNumber;
+    console.log(`?????? 잘 가져오니 ?? - ${winningNumber}`);
+    this.validateBonusNumber(input, winningNumber);
     return input;
   }
 
-  validateBonusNumber(value) {
+  validateBonusNumber(value, winningNumber) {
     this.validation.empty(value);
     const regExpPattern = /\d{1,2}/;
     this.validation.regularExpression(value, regExpPattern);
+    this.validation.isDuplicatedInWinningNumber(value, winningNumber);
   }
 
   async errorCatch() {
@@ -41,7 +46,7 @@ class InputBonusModule {
     for (let i = 0; i < 10; i++) {
       const vlaidatedInput = await this.errorCatch();
       if (vlaidatedInput) return vlaidatedInput;
-      if (i === 5) throw new Error(ERROR_MESSAGES.ENTERED_MORE_FIVE_TIMES);
+      if (i === 5) throw new Error(ERROR_MESSAGES.enteredMoreFiveTimes);
     }
   }
 }
