@@ -12,7 +12,7 @@ class InputPurchaseModule {
     const validatedPurchaseAmount = await this.repeatInput();
     const changgeTypeNumber = Number(validatedPurchaseAmount);
     OutputView.printSpace();
-    return changgeTypeNumber / 1000;
+    return changgeTypeNumber;
   }
 
   async inputAndValidation() {
