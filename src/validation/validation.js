@@ -44,7 +44,7 @@ class validation {
     const changeTypeNumber = Number(value);
     const target = changeTypeNumber / 1000;
     const isInteger = Number.isInteger(target);
-    if (!isInteger) createThrowError(ERROR_MESSAGES.thiusandUnit);
+    if (!isInteger) createThrowError(ERROR_MESSAGES.thousandUnit);
     if (0 < target && target > 101) createThrowError(ERROR_MESSAGES.THOUSAND_UNIT);
     return true;
   }

@@ -10,7 +10,7 @@ const ERROR_MESSAGES = {
   enteredMoreFiveTimes: '5회 이상 잘못 입력하여 종료되없습니다. 다시 실행해주세요.',
   limitDigits: createMsg('최소 4자리 숫자부터 6자리 숫자까지 입력 가능합니다.'),
   negativeNumber: createMsg('음수가 입력될 수 없습니다.'),
-  thiusandUnit: createMsg(
+  thousandUnit: createMsg(
     '로또 금액인 1000원 단위로만 입력 가능하며, 최대 10만원까지 입력 가능합니다.'
   ),
 };
