@@ -18,9 +18,7 @@ class InputBonusModule {
 
   async inputAndValidation() {
     const input = await InputView.readBonusNumber();
-    console.log(`?????? 잘 가져오니 ?? - ${input}`);
     const winningNumber = this.winningNumber;
-    console.log(`?????? 잘 가져오니 ?? - ${winningNumber}`);
     this.validateBonusNumber(input, winningNumber);
     return input;
   }
