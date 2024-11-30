@@ -54,6 +54,13 @@ class validation {
     if (lottoNumberArray.length !== 6) createThrowError(ERROR_MESSAGES.winningNumberSixDigit);
     return true;
   }
+
+  isDuplicatedInWinningNumber(bonusNumber, winningNumber) {
+    const isDuplicated = winningNumber.some(
+      (winningNumber) => Number(winningNumber) === Number(bonusNumber)
+    );
+    if (isDuplicated) createThrowError(ERROR_MESSAGES.isDuplicatedInWinningNumber);
+  }
 }
 
 export default validation;
