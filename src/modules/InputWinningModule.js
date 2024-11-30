@@ -26,6 +26,7 @@ class InputWinningModule {
     this.validation.endedComma(value);
     const regExpPattern = /^\d(,\s?\d)*/;
     this.validation.regularExpression(value, regExpPattern);
+    this.validation.winningNumberSixDigit(value);
   }
 
   async errorCatch() {
