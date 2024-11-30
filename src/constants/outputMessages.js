@@ -1,6 +1,6 @@
 const OUTPUT_MESSAGES = {
   purchaseNumber: '개를 구매했습니다.',
-  winningStatistics: '당첨통계\n--- ',
+  winningStatistics: '당첨 통계\n--- ',
   matchedThree: '3개 일치 (5,000원) - ',
   matchedFour: '4개 일치 (50,000원) - ',
   matchedFive: '5개 일치 (1,500,000원) - ',
