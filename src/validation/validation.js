@@ -48,6 +48,12 @@ class validation {
     if (0 < target && target > 101) createThrowError(ERROR_MESSAGES.THOUSAND_UNIT);
     return true;
   }
+
+  winningNumberSixDigit(value) {
+    const lottoNumberArray = value.split(',');
+    if (lottoNumberArray.length !== 6) createThrowError(ERROR_MESSAGES.winningNumberSixDigit);
+    return true;
+  }
 }
 
 export default validation;
