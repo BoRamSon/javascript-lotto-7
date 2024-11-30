@@ -13,6 +13,7 @@ const ERROR_MESSAGES = {
   thousandUnit: createMsg(
     '로또 금액인 1000원 단위로만 입력 가능하며, 최대 10만원까지 입력 가능합니다.'
   ),
+  winningNumberSixDigit: createMsg('당첨번호는 6자리를 입력해야합니다.'),
 };
 
 export { ERROR_PREFIX, ERROR_MESSAGES };
