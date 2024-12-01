@@ -1,5 +1,6 @@
 import { ERROR_MESSAGES } from '../constants/errorMessages.js';
 import createThrowError from '../utils/createError.js';
+import makeArrayFromString from '../utils/makeArrayFromString.js';
 
 class validation {
   empty(value) {
@@ -45,7 +46,7 @@ class validation {
     const target = changeTypeNumber / 1000;
     const isInteger = Number.isInteger(target);
     if (!isInteger) createThrowError(ERROR_MESSAGES.thousandUnit);
-    if (0 < target && target > 101) createThrowError(ERROR_MESSAGES.THOUSAND_UNIT);
+    if (0 < target && target > 101) createThrowError(ERROR_MESSAGES.thousandUnit);
     return true;
   }
 
@@ -56,9 +57,9 @@ class validation {
   }
 
   isDuplicatedInLottoNumbers(number) {
-    const removeDuplicated = new Set(number);
-    const uniqueArray = [...removeDuplicated];
-    if (number.length !== uniqueArray.length)
+    const changeArray = makeArrayFromString(number);
+    const removeDuplicated = new Set(changeArray).size;
+    if (changeArray.length !== removeDuplicated)
       createThrowError(ERROR_MESSAGES.isDuplicatedInLottoNumbers);
   }
 
